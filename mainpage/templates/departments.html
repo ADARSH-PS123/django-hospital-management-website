@@ -1,0 +1,17 @@
+{%extends 'homepage.html'%}
+{%block title%}
+departments
+{% endblock %}
+{%block body-section %}
+<div class="container">
+  <h3 >
+    <ul>
+      {%for x in depts%}
+      <li>{{x.dept_name}} : </li>
+      <p >{{x.dept_description}}</p>
+      {% endfor %}
+    </ul>
+ </h3>
+</div>
+
+{% endblock%}

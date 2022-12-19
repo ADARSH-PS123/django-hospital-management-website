@@ -1,0 +1,31 @@
+
+{% extends 'homepage.html' %}
+{%block title%}
+doctors
+{% endblock %}
+{%block body-section %}
+
+
+
+   
+     
+<div class="container">
+   
+    {% for x in doctors%}
+            <div class="card" style="width: 18rem; display: inline-block;margin: 3px;">
+                <img src="{{x.photo.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{x.doc_name}}</h5>
+                  <p class="card-text">{{x.specialization}}</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div>
+              {% endfor %}
+   
+  </div>
+   
+
+
+
+
+{% endblock %}
